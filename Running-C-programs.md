@@ -29,4 +29,7 @@ The WASM file can be ran with our interpreter by using:
 ```
 wasm -m -wasm a.out.wasm
 ```
-It should run the main function from the C file.
+It should run the main function from the C file. Use trace option `-t` to see what happened.
+```
+wasm -t -m -wasm a.out.wasm
+```
