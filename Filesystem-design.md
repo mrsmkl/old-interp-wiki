@@ -54,7 +54,7 @@ void initSystem() {
 
 `___syscall5` is for opening files.
 
-```
+```c
 int ___syscall5(int which, int *varargs) {
   char *name = varargs[0];
   int flags = varargs[1];
