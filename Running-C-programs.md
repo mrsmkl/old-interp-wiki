@@ -22,6 +22,7 @@ If it complains about not finding `wasm.js-pre.js`, create it using
 cp ~/src/js/binaryen.js-pre.js ~/binaryen/src/js/wasm.js-pre.js
 cp ~/src/js/binaryen.js-post.js ~/binaryen/src/js/wasm.js-post.js
 ```
+(These seem to be wrong, but they are only needed for running it in the browser)
 
 Compiling the C file with emscripten will create two files, `a.out.wast` and `a.out.wasm`. `a.out.wast` won't work because binaryen and reference interpreter disagree about WAST syntax. See also https://github.com/kripken/emscripten/wiki/WebAssembly
 
