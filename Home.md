@@ -1,6 +1,6 @@
 # Introduction
 
-This repo has a fork of the WebAssembly reference interpreter that has been modified to be able to generate Merkle proofs that are needed to verify off-chain computations. The actual execution of the WebAssembly programs is different too, as described [here](Initializing and preprocessing WebAssembly).
+This repo has a fork of the WebAssembly reference interpreter that has been modified to be able to generate Merkle proofs that are needed to verify off-chain computations. The actual execution of the WebAssembly programs is different too, as described [Initializing-and-preprocessing-WebAssembly](here).
 
 ## Command line options
 
