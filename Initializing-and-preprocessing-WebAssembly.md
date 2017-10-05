@@ -22,3 +22,23 @@ Another step that is not implemented in the on-chain interpreter is decoding ins
 ## Verified generation of the initial state
 
 There can be an initial state such that given a wasm file as input, it will generate the initial state for that wasm file.
+
+## Description of special instructions
+
+There are following special instructions:
+* `EXIT`: Normal exit.
+* `JUMP`: Static jump to a position in code.
+* `JUMPI`: Conditional jump to a position in code. Jumps if the top element in stack is not `0`.
+* `JUMPFORWARD n`: Use a jump table with size `n`.
+* `LABEL`: Used to resolve the jumps.
+* `RETURN`: Returns from function, this means that it takes a value from the call stack and jumps to that location.
+* `DROP`: Can drop many values from stack.
+* `DUP n`: Duplicates the `n`th element from stack to the top. Used for getting local variables.
+* `SWAP n`: Replaces the `n`th element in the stack with the top element. Used for setting local variables.
+* `CHECKCALLI`: Check that the type of the function that will be called indirectly is correct.
+* `INPUTSIZE n`: Get the size of `n`th file.
+* `INPUTNAME n i`: Get the `i`th byte of the name of the `n`th file.
+* `INPUTDATA n i`: Get the `i`th byte of the `n`th file.
+* `OUTPUTSIZE n sz`: Set the size of `n`th file. Also sets the bytes all to zero.
+* `OUTPUTNAME n i v`: Set the `i`th byte of the name of the `n`th file.
+* `OUTPUTDATA n i v`: Set the `i`th byte of the `n`th file.
