@@ -21,7 +21,15 @@ Another step that is not implemented in the on-chain interpreter is decoding ins
 
 ## Verified generation of the initial state
 
-There can be an initial state such that given a wasm file as input, it will generate the initial state for that wasm file.
+Currently the specification of the task is the hash of the initial state. Because of this, when a task is posted as wasm file, it has to be associated with an initial state hash. Then the solvers and verifiers can check if the wasm file and the initial state match.
+
+There is a problem if the wasm file and the initial state do not match. The whole initial state could be posted instead, but it might be several times larger than the wasm file (if decoding the instructions is not implemented in solidity).
+
+Solution alternatives:
+* Implement preprocessing in solidity
+* Implement preprocessor as wasm module
+
+The second alternative is easier, for example the ocaml runtime can be compiled into wasm: https://github.com/sebmarkbage/ocamlrun-wasm
 
 ## Description of special instructions
 
