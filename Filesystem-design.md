@@ -39,6 +39,14 @@ For example the input data could represent account balances of million addresses
 
 How to make sure that the file contents won't change in the middle of verification game???
 
+## Using Swarm or IPFS directly for the file system
+
+The instructions for using Swarm etc. hashes for file system directly would probably be a bit more complex, because they are larger than 64-bits. Otherwise they would hopefully be similar.
+
+Chunks: instead of files, Swarm and IPFS store _chunks_. There are two kinds of chunks, leaf chunks and inner chunks. A leaf chunk contains a piece of data and its length. An inner chunk contains hashes of chunks and their total length.
+
+In IPFS, files are chunks with names, and directories are chunks that have files or other directories as inner chunks.
+
 ## Simple file system
 
 For example we could have the following global structure to manage the filesystem:
