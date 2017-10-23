@@ -131,10 +131,5 @@ int ___syscall5(int which, int *varargs) {
 }
 ```
 
-Need to think about creating new files.
-
-TODO:
-  * reading and writing
-  * what other system calls are needed?
 
 
