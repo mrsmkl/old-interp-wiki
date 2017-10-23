@@ -41,6 +41,8 @@ How to make sure that the file contents won't change in the middle of verificati
 
 ## Using Swarm or IPFS directly for the file system
 
+Because Swarm and IPFS use content hashes, they can be used for verified computations, at least if data availability is guaranteed.
+
 The instructions for using Swarm etc. hashes for file system directly would probably be a bit more complex, because they are larger than 64-bits. Otherwise they would hopefully be similar.
 
 Chunks: instead of files, Swarm and IPFS store _chunks_. There are two kinds of chunks, leaf chunks and inner chunks. A leaf chunk contains a piece of data and its length. An inner chunk contains hashes of chunks and their total length.
