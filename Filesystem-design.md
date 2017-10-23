@@ -41,7 +41,7 @@ How to make sure that the file contents won't change in the middle of verificati
 
 ## Using Swarm or IPFS directly for the file system
 
-Because Swarm and IPFS use content hashes, they can be used for verified computations, at least if data availability is guaranteed.
+Because Swarm and IPFS use Merkle roots, they can be used for verified computations, at least if data availability is guaranteed.
 
 The instructions for using Swarm etc. hashes for file system directly would probably be a bit more complex, because they are larger than 64-bits. Otherwise they would hopefully be similar.
 
