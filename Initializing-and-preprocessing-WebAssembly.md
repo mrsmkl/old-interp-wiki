@@ -17,7 +17,7 @@ There are two reasons why the WebAssembly code is pre-processed before it is int
 
 ## Decoding
 
-Another step that is not implemented in the on-chain interpreter is decoding instructions. This means that each the action of each phase in the execution of an instruction is given separately. This step could be implemented in the on-chain interpreter to save storage space. One complication would be that instructions would have different sizes because some need immediate values.
+Another step that is not implemented in the on-chain interpreter is decoding instructions. This means that each action of each phase in the execution of an instruction is given separately. This step could be implemented in the on-chain interpreter to save storage space. One complication would be that instructions would have different sizes because some need immediate values.
 
 ## Verified generation of the initial state
 
