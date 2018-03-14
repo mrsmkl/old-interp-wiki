@@ -1,12 +1,12 @@
 ## Initialization
 
-Initialization:
+WebAssembly has the following steps before starting the execution of program:
 * Initialize memory
 * Initialize global variables
 * Initialize call tables: an index can be used to call any function from the call table.
 Instead of function types we have a function type hash. This way we can be sure that indirect calls can be checked easily.
 
-It might be useful to start from empty memory etc, and have initialization code instead, so the code would include almost all of the information.
+It is useful to start from empty memory etc, and have initialization code instead, so the code would include almost all of the information needed for running a task. Only other information that is needed is the input from the file system. Then, the task specification is just (the hash of) the code and the input. An empty VM state can be easily constructed from this data (using hashes of empty stack etc.).
 
 ## Pre-processing
 
